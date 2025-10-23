@@ -32,10 +32,11 @@ const events = [
     { type: "personal", title: "盗坊重修", desc: "你资助修缮赌坊，未来可抽取一次额外事件。", effect: { bonus: true } }
 ];
 
-function getRandomEvent(type = "personal") {
-    const filtered = events.filter(e => e.type === type);
-    const idx = Math.floor(Math.random() * filtered.length);
-    return filtered[idx];
+export function getRandomEvent(type = "personal") {
+  const filtered = events.filter(e => e.type === type);
+  const idx = Math.floor(Math.random() * filtered.length);
+  return filtered[idx];
 }
 
 module.exports = { getRandomEvent, events };
+
